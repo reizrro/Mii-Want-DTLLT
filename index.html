@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preparing Download...</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding-top: 120px;
+    }
+    .loader {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h2>Preparing your download...</h2>
+  <div class="loader">Please wait...</div>
+
+  <script>
+    setTimeout(() => {
+      window.open("https://files.catbox.moe/jwbz5u.mp4");
+
+      const a = document.createElement("a");
+      a.href = "https://files.catbox.moe/jwbz5u.mp4";
+      a.download = "video_file.mp4";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+    }, 2500);
+  </script>
+</body>
+</html>
